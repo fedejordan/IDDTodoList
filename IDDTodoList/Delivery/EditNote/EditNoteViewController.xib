@@ -50,6 +50,9 @@
                     <state key="normal" title="Confirm">
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
+                    <connections>
+                        <action selector="didTapConfirmEditWithSender:" destination="-1" eventType="touchUpInside" id="0tD-hm-QOM"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -30,7 +30,9 @@ class InMemoryNotesRepository: NotesRepository {
     func update(note: Note, with title: String, completion: (Bool) -> Void)  {
         let index = notes.firstIndex { $0.id == note.id }
         if let index = index {
-            notes[index] = noteDTO(from: note)
+            let newNote = Note(id: note.id, title: title)
+            notes[index] = noteDTO(from: newNote)
+            completion(true)
         }
     }
 

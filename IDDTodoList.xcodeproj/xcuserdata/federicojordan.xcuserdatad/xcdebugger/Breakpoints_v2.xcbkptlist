@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IDDTodoList/Delivery/NotesList/NotesListPresenter.swift"
-            timestampString = "591311279.528752"
+            timestampString = "591311870.724244"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IDDTodoList/Delivery/NotesList/NotesListPresenter.swift"
-            timestampString = "591311279.528833"
+            timestampString = "591311870.7243381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -42,7 +42,7 @@
                   moduleName = "IDDTodoList"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/federicojordan/Work/tests/IDDTodoList/IDDTodoList/Delivery/NotesList/NotesListPresenter.swift"
-                  timestampString = "591311374.481527"
+                  timestampString = "591311670.927224"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -57,7 +57,7 @@
                   moduleName = "IDDTodoList"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/federicojordan/Work/tests/IDDTodoList/IDDTodoList/Delivery/NotesList/NotesListPresenter.swift"
-                  timestampString = "591311374.483336"
+                  timestampString = "591311670.929871"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IDDTodoList/Delivery/NotesList/NotesListPresenter.swift"
-            timestampString = "591311279.528886"
+            timestampString = "591311870.72439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -96,6 +96,166 @@
             startingLineNumber = "25"
             endingLineNumber = "25"
             landmarkName = "execute(note:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IDDTodoList/Delivery/EditNote/EditNoteNavigator.swift"
+            timestampString = "591311708.490536"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "goBack()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IDDTodoList/Delivery/EditNote/EditNoteNavigator.swift"
+            timestampString = "591311708.970771"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "goBack()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IDDTodoList/Delivery/NotesList/NotesListCoordinator.swift"
+            timestampString = "591311724.823467"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "didUpdateNote()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IDDTodoList/Delivery/NotesList/NotesListPresenter.swift"
+            timestampString = "591311870.724496"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "shouldUpdateList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IDDTodoList/Delivery/NotesList/NotesListPresenter.swift"
+            timestampString = "591311870.724545"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "reloadNotes()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IDDTodoList/Infrastructure/Repositories/InMemoryNotesRepository.swift"
+            timestampString = "591311870.724594"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "update(note:with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IDDTodoList.InMemoryNotesRepository.update(note: IDDTodoList.Note, with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "IDDTodoList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/federicojordan/Work/tests/IDDTodoList/IDDTodoList/Infrastructure/Repositories/InMemoryNotesRepository.swift"
+                  timestampString = "591311762.9242719"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "142">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (IDDTodoList.NoteDTO) -&gt; Swift.Bool in IDDTodoList.InMemoryNotesRepository.update(note: IDDTodoList.Note, with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "IDDTodoList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/federicojordan/Work/tests/IDDTodoList/IDDTodoList/Infrastructure/Repositories/InMemoryNotesRepository.swift"
+                  timestampString = "591311762.926217"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "70">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IDDTodoList/Infrastructure/Repositories/InMemoryNotesRepository.swift"
+            timestampString = "591311870.724988"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "update(note:with:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IDDTodoList/Infrastructure/Repositories/InMemoryNotesRepository.swift"
+            timestampString = "591311870.7252409"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "update(note:with:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
