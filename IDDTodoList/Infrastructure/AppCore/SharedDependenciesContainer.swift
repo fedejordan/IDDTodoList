@@ -22,7 +22,7 @@ protocol DependenciesContainer {
 
 class SharedDependenciesContainer: DependenciesContainer {
     // Repositories
-    var notesRepository: NotesRepository = InMemoryNotesRepository()
+    var notesRepository: NotesRepository = UserDefaultsNotesRepository()
     var sessionsRepository: SessionsRepository = InMemorySessionsRepository()
     var usersRepository: UsersRepository = InMemoryUsersRepository()
 

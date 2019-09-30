@@ -30,6 +30,7 @@
 		6D843A1E2342A982004A6B20 /* InMemoryUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A1D2342A982004A6B20 /* InMemoryUsersRepository.swift */; };
 		6D843A202342A9C6004A6B20 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A1F2342A9C6004A6B20 /* UserDTO.swift */; };
 		6D843A222342AB1B004A6B20 /* SessionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A212342AB1B004A6B20 /* SessionDTO.swift */; };
+		6D843A242342AF0F004A6B20 /* UserDefaultsNotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A232342AF0F004A6B20 /* UserDefaultsNotesRepository.swift */; };
 		6DF4A527233AB7CF0077FA75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4A526233AB7CF0077FA75 /* AppDelegate.swift */; };
 		6DF4A529233AB7CF0077FA75 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4A528233AB7CF0077FA75 /* NotesListViewController.swift */; };
 		6DF4A52E233AB7D30077FA75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4A52D233AB7D30077FA75 /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		6D843A1D2342A982004A6B20 /* InMemoryUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryUsersRepository.swift; sourceTree = "<group>"; };
 		6D843A1F2342A9C6004A6B20 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		6D843A212342AB1B004A6B20 /* SessionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDTO.swift; sourceTree = "<group>"; };
+		6D843A232342AF0F004A6B20 /* UserDefaultsNotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNotesRepository.swift; sourceTree = "<group>"; };
 		6DF4A523233AB7CF0077FA75 /* IDDTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDDTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF4A526233AB7CF0077FA75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DF4A528233AB7CF0077FA75 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				6DF4A58D233C7ACB0077FA75 /* InMemoryNotesRepository.swift */,
+				6D843A232342AF0F004A6B20 /* UserDefaultsNotesRepository.swift */,
 				6D843A1D2342A982004A6B20 /* InMemoryUsersRepository.swift */,
 				6D843A1B2342A900004A6B20 /* InMemorySessionsRepository.swift */,
 			);
@@ -572,6 +575,7 @@
 				6DF4A57E233BF91D0077FA75 /* NoteTableViewCell.swift in Sources */,
 				6D765136233E938800A98D45 /* EditNoteViewController.swift in Sources */,
 				6D843A1023429DC0004A6B20 /* LoginNavigator.swift in Sources */,
+				6D843A242342AF0F004A6B20 /* UserDefaultsNotesRepository.swift in Sources */,
 				6D843A0823428BF7004A6B20 /* LoginBuilder.swift in Sources */,
 				6DF4A596233D53BE0077FA75 /* DeleteNote.swift in Sources */,
 				6D843A1E2342A982004A6B20 /* InMemoryUsersRepository.swift in Sources */,
