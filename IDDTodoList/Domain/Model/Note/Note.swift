@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Note: Equatable {
+struct Note {
     let id: String
     let title: String
 }

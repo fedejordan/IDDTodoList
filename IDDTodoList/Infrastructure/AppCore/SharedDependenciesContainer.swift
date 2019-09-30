@@ -16,15 +16,28 @@ protocol DependenciesContainer {
     var createNote: CreateNote { get }
     var deleteNote: DeleteNote { get }
     var editNote: EditNote { get }
+    var loginUser: LoginUser { get }
+    var loginBuilder: LoginBuilder { get }
 }
 
 class SharedDependenciesContainer: DependenciesContainer {
     // Repositories
-    var inMemoryNotesRepository: InMemoryNotesRepository = InMemoryNotesRepository()
+    var notesRepository: NotesRepository = InMemoryNotesRepository()
+    var sessionsRepository: SessionsRepository = InMemorySessionsRepository()
+    var usersRepository: UsersRepository = InMemoryUsersRepository()
 
     // Services
     var notesService: NotesService {
-        return  DefaultNotesService(notesRepository: inMemoryNotesRepository)
+        return DefaultNotesService(notesRepository: notesRepository)
+    }
+
+    var authenticationService: AuthenticationService {
+        return DefaultAuthenticationService(usersService: usersService,
+                                            sessionsRepository: sessionsRepository)
+    }
+
+    var usersService: UsersService {
+        return DefaultUsersService(usersRepository: usersRepository)
     }
 
     // Actions
@@ -44,6 +57,10 @@ class SharedDependenciesContainer: DependenciesContainer {
         return DefaultEditNote(notesService: notesService)
     }
 
+    var loginUser: LoginUser {
+        return DefaultLoginUser(authenticationService: authenticationService)
+    }
+
     // Builders
     var notesListBuilder: NotesListBuilder {
         return NotesListBuilder(dependenciesContainer: self)
@@ -55,5 +72,9 @@ class SharedDependenciesContainer: DependenciesContainer {
 
     var editNoteBuilder: EditNoteBuilder {
         return EditNoteBuilder(dependenciesContainer: self)
+    }
+
+    var loginBuilder: LoginBuilder {
+        return LoginBuilder(dependenciesContainer: self)
     }
 }
