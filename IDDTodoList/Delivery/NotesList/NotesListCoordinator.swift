@@ -38,6 +38,10 @@ extension NotesListCoordinator: NotesListPresenterNavigator {
         viewController?.show(editNoteViewController, sender: nil)
     }
 
+    func goBack() {
+        viewController?.dismiss(animated: true, completion: nil)
+    }
+
 }
 
 extension NotesListCoordinator: AddNoteCoordinatorListener {

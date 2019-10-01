@@ -10,6 +10,7 @@ import UIKit
 
 protocol LoginViewControllerListener {
     func didTapLogin(with username: String, password: String)
+    func didTapSignUp()
 }
 
 class LoginViewController: UIViewController {
@@ -20,12 +21,17 @@ class LoginViewController: UIViewController {
     var listener: LoginViewControllerListener!
 
     // MARK:- Actions
+
     @IBAction private func didTapLogin(sender: UIButton) {
         guard let username = usernameTextField.text,
             let password = passwordTextField.text else {
                 return
         }
         listener.didTapLogin(with: username, password: password)
+    }
+
+    @IBAction private func didTapSignUp(sender: UIButton) {
+        listener.didTapSignUp()
     }
 
 }

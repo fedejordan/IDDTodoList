@@ -21,11 +21,6 @@ class DefaultLoginUser: LoginUser {
     }
 
     func execute(username: String, password: String, completion: (Bool) -> Void) {
-        authenticationService.login(with: username, password: password) { session in
-            guard session != nil else {
-                return completion(false)
-            }
-            completion(true)
-        }
+        authenticationService.login(with: username, password: password, completion: completion)
     }
 }

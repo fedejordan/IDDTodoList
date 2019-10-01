@@ -11,9 +11,10 @@ import UIKit
 struct NoteDTO {
     let id: String
     let title: String
+    let userId: String
 
     func toNote() -> Note {
-        return Note(id: id, title: title)
+        return Note(id: id, title: title, userId: userId)
     }
 
 }

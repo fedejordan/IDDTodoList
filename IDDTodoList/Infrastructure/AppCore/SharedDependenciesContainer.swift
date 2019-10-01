@@ -12,12 +12,15 @@ protocol DependenciesContainer {
     var notesService: NotesService { get }
     var addNoteBuilder: AddNoteBuilder { get }
     var editNoteBuilder: EditNoteBuilder { get }
+    var loginBuilder: LoginBuilder { get }
+    var signUpBuilder: SignUpBuilder { get }
     var getNotes: GetNotes { get }
     var createNote: CreateNote { get }
     var deleteNote: DeleteNote { get }
     var editNote: EditNote { get }
     var loginUser: LoginUser { get }
-    var loginBuilder: LoginBuilder { get }
+    var signUpUser: SignUpUser { get }
+    var logoutUser: LogoutUser { get }
 }
 
 class SharedDependenciesContainer: DependenciesContainer {
@@ -28,7 +31,8 @@ class SharedDependenciesContainer: DependenciesContainer {
 
     // Services
     var notesService: NotesService {
-        return DefaultNotesService(notesRepository: notesRepository)
+        return DefaultNotesService(notesRepository: notesRepository,
+                                   authenticationService: authenticationService)
     }
 
     var authenticationService: AuthenticationService {
@@ -61,6 +65,14 @@ class SharedDependenciesContainer: DependenciesContainer {
         return DefaultLoginUser(authenticationService: authenticationService)
     }
 
+    var signUpUser: SignUpUser {
+        return DefaultSignUpUser(authenticationService: authenticationService)
+    }
+
+    var logoutUser: LogoutUser {
+        return DefaultLogoutUser(authenticationService: authenticationService)
+    }
+
     // Builders
     var notesListBuilder: NotesListBuilder {
         return NotesListBuilder(dependenciesContainer: self)
@@ -76,5 +88,9 @@ class SharedDependenciesContainer: DependenciesContainer {
 
     var loginBuilder: LoginBuilder {
         return LoginBuilder(dependenciesContainer: self)
+    }
+
+    var signUpBuilder: SignUpBuilder {
+        return SignUpBuilder(dependenciesContainer: self)
     }
 }

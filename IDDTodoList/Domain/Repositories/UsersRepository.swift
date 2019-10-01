@@ -9,5 +9,7 @@
 import UIKit
 
 protocol UsersRepository {
+    func getUser(forUserId userId: String, completion: (User?) -> Void)
     func getUser(for username: String, completion: (User?) -> Void)
+    func createUser(with username: String, password: String, completion: (User?) -> Void)
 }

@@ -59,10 +59,18 @@
                         <action selector="didTapLoginWithSender:" destination="-1" eventType="touchUpInside" id="fG2-hf-Xj2"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyx-MG-7Bx">
+                    <rect key="frame" x="119" y="143" width="176" height="30"/>
+                    <state key="normal" title="Sign up with new account"/>
+                    <connections>
+                        <action selector="didTapSignUpWithSender:" destination="-1" eventType="touchUpInside" id="XQ8-i7-IiG"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="q7i-hq-POb" firstAttribute="leading" secondItem="BCi-vJ-lSr" secondAttribute="trailing" constant="17" id="56e-7u-meP"/>
+                <constraint firstItem="iyx-MG-7Bx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8nh-ly-vuy"/>
                 <constraint firstItem="PlC-sK-XBf" firstAttribute="centerY" secondItem="bEP-rX-aOQ" secondAttribute="centerY" id="Abs-ZN-KL8"/>
                 <constraint firstItem="bEP-rX-aOQ" firstAttribute="width" secondItem="q7i-hq-POb" secondAttribute="width" id="BLI-ZW-b7D"/>
                 <constraint firstItem="bEP-rX-aOQ" firstAttribute="top" secondItem="q7i-hq-POb" secondAttribute="bottom" constant="3" id="GCF-Z7-0hP"/>
@@ -71,12 +79,14 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="q7i-hq-POb" secondAttribute="trailing" constant="20" id="dPF-fr-2JB"/>
                 <constraint firstItem="PlC-sK-XBf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="gXc-pv-iA9"/>
                 <constraint firstItem="5Hc-GT-hI8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iCH-hq-IWB"/>
+                <constraint firstItem="iyx-MG-7Bx" firstAttribute="top" secondItem="bEP-rX-aOQ" secondAttribute="bottom" constant="16" id="j41-Bd-GFR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5Hc-GT-hI8" secondAttribute="bottom" id="rsO-oX-G38"/>
                 <constraint firstItem="5Hc-GT-hI8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="slZ-pM-qcH"/>
                 <constraint firstItem="BCi-vJ-lSr" firstAttribute="top" secondItem="q7i-hq-POb" secondAttribute="top" id="zVO-ZE-pgz"/>
                 <constraint firstItem="BCi-vJ-lSr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zj4-TX-KUY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="50.724637681159422" y="35.491071428571423"/>
         </view>
     </objects>
 </document>

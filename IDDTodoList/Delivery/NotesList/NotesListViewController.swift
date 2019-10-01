@@ -15,6 +15,7 @@ protocol NotesListViewControllerListener {
     func didSelectDeleteNote(at index: Int)
     func didSelectEditNote(at index: Int)
     func note(at index: Int) -> NoteViewModel
+    func didTapLogout()
 }
 
 class NotesListViewController: UIViewController {
@@ -28,6 +29,7 @@ class NotesListViewController: UIViewController {
 
         listener.didLoad()
         setupTableView()
+        setupLogoutButton()
     }
 
     // MARK:- Interface
@@ -36,10 +38,19 @@ class NotesListViewController: UIViewController {
         notesTableView.register(UINib(nibName: "NoteTableViewCell", bundle: nil), forCellReuseIdentifier: "NoteTableViewCell")
     }
 
+    private func setupLogoutButton() {
+        let logoutButton = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(didTapLogout))
+        navigationItem.leftBarButtonItem = logoutButton
+    }
+
     // MARK:- Actions
 
     @IBAction func didTapAddNote() {
         listener?.didTapAddNote()
+    }
+
+    @objc private func didTapLogout() {
+        listener?.didTapLogout()
     }
 
 }

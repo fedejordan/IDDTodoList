@@ -10,10 +10,12 @@ import UIKit
 
 protocol LoginPresenterViewControllable: class {
     func showLoginError()
+
 }
 
 protocol LoginPresenterNavigator {
     func shouldPresentNotes()
+    func shouldShowSignUp()
 }
 
 class LoginPresenter {
@@ -26,8 +28,6 @@ class LoginPresenter {
         self.loginUser = loginUser
     }
 
-
-
 }
 
 extension LoginPresenter: LoginViewControllerListener {
@@ -39,6 +39,10 @@ extension LoginPresenter: LoginViewControllerListener {
                 self.viewController?.showLoginError()
             }
         }
+    }
+
+    func didTapSignUp() {
+        navigator.shouldShowSignUp()
     }
 
 

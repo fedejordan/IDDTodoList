@@ -31,6 +31,13 @@
 		6D843A202342A9C6004A6B20 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A1F2342A9C6004A6B20 /* UserDTO.swift */; };
 		6D843A222342AB1B004A6B20 /* SessionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A212342AB1B004A6B20 /* SessionDTO.swift */; };
 		6D843A242342AF0F004A6B20 /* UserDefaultsNotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A232342AF0F004A6B20 /* UserDefaultsNotesRepository.swift */; };
+		6D843A2823438B47004A6B20 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A2623438B47004A6B20 /* SignUpViewController.swift */; };
+		6D843A2923438B47004A6B20 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D843A2723438B47004A6B20 /* SignUpViewController.xib */; };
+		6D843A2B23438C88004A6B20 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A2A23438C88004A6B20 /* SignUpPresenter.swift */; };
+		6D843A2D23438C95004A6B20 /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A2C23438C95004A6B20 /* SignUpBuilder.swift */; };
+		6D843A2F23438CD1004A6B20 /* SignUpNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A2E23438CD1004A6B20 /* SignUpNavigator.swift */; };
+		6D843A312343A36B004A6B20 /* SignUpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A302343A36B004A6B20 /* SignUpUser.swift */; };
+		6D843A332343A4D0004A6B20 /* LogoutUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843A322343A4D0004A6B20 /* LogoutUser.swift */; };
 		6DF4A527233AB7CF0077FA75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4A526233AB7CF0077FA75 /* AppDelegate.swift */; };
 		6DF4A529233AB7CF0077FA75 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4A528233AB7CF0077FA75 /* NotesListViewController.swift */; };
 		6DF4A52E233AB7D30077FA75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4A52D233AB7D30077FA75 /* Assets.xcassets */; };
@@ -107,6 +114,13 @@
 		6D843A1F2342A9C6004A6B20 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		6D843A212342AB1B004A6B20 /* SessionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDTO.swift; sourceTree = "<group>"; };
 		6D843A232342AF0F004A6B20 /* UserDefaultsNotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNotesRepository.swift; sourceTree = "<group>"; };
+		6D843A2623438B47004A6B20 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6D843A2723438B47004A6B20 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		6D843A2A23438C88004A6B20 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		6D843A2C23438C95004A6B20 /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
+		6D843A2E23438CD1004A6B20 /* SignUpNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNavigator.swift; sourceTree = "<group>"; };
+		6D843A302343A36B004A6B20 /* SignUpUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUser.swift; sourceTree = "<group>"; };
+		6D843A322343A4D0004A6B20 /* LogoutUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUser.swift; sourceTree = "<group>"; };
 		6DF4A523233AB7CF0077FA75 /* IDDTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDDTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF4A526233AB7CF0077FA75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DF4A528233AB7CF0077FA75 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +210,18 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		6D843A2523437D5D004A6B20 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				6D843A2C23438C95004A6B20 /* SignUpBuilder.swift */,
+				6D843A2623438B47004A6B20 /* SignUpViewController.swift */,
+				6D843A2A23438C88004A6B20 /* SignUpPresenter.swift */,
+				6D843A2723438B47004A6B20 /* SignUpViewController.xib */,
+				6D843A2E23438CD1004A6B20 /* SignUpNavigator.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		6DF4A51A233AB7CF0077FA75 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +295,8 @@
 				6DF4A595233D53BE0077FA75 /* DeleteNote.swift */,
 				6DF4A59D233E675E0077FA75 /* EditNote.swift */,
 				6D843A0B2342999D004A6B20 /* LoginUser.swift */,
+				6D843A302343A36B004A6B20 /* SignUpUser.swift */,
+				6D843A322343A4D0004A6B20 /* LogoutUser.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -276,7 +304,7 @@
 		6DF4A556233BAE610077FA75 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6DF4A55D233BB61A0077FA75 /* Note */,
+				6DF4A56C233BC0890077FA75 /* Note.swift */,
 				6D843A0D23429ACB004A6B20 /* User.swift */,
 				6D843A172342A549004A6B20 /* Session.swift */,
 			);
@@ -286,6 +314,7 @@
 		6DF4A559233BB1D50077FA75 /* Delivery */ = {
 			isa = PBXGroup;
 			children = (
+				6D843A2523437D5D004A6B20 /* SignUp */,
 				6D843A02234287F9004A6B20 /* Login */,
 				6D765133233E937400A98D45 /* EditNote */,
 				6DF4A563233BB8710077FA75 /* AddNote */,
@@ -307,14 +336,6 @@
 				6DF4A586233C0CCD0077FA75 /* NotesListCoordinator.swift */,
 			);
 			path = NotesList;
-			sourceTree = "<group>";
-		};
-		6DF4A55D233BB61A0077FA75 /* Note */ = {
-			isa = PBXGroup;
-			children = (
-				6DF4A56C233BC0890077FA75 /* Note.swift */,
-			);
-			path = Note;
 			sourceTree = "<group>";
 		};
 		6DF4A563233BB8710077FA75 /* AddNote */ = {
@@ -383,8 +404,8 @@
 		6DF4A58C233C7AB60077FA75 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				6DF4A58D233C7ACB0077FA75 /* InMemoryNotesRepository.swift */,
 				6D843A232342AF0F004A6B20 /* UserDefaultsNotesRepository.swift */,
+				6DF4A58D233C7ACB0077FA75 /* InMemoryNotesRepository.swift */,
 				6D843A1D2342A982004A6B20 /* InMemoryUsersRepository.swift */,
 				6D843A1B2342A900004A6B20 /* InMemorySessionsRepository.swift */,
 			);
@@ -542,6 +563,7 @@
 				6DF4A57F233BF91D0077FA75 /* NoteTableViewCell.xib in Resources */,
 				6D765137233E938800A98D45 /* EditNoteViewController.xib in Resources */,
 				6D843A062342880A004A6B20 /* LoginViewController.xib in Resources */,
+				6D843A2923438B47004A6B20 /* SignUpViewController.xib in Resources */,
 				6DF4A567233BB9DE0077FA75 /* AddNoteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +595,9 @@
 				6DF4A560233BB6410077FA75 /* NotesListPresenter.swift in Sources */,
 				6D76513D233EAF4F00A98D45 /* EditNoteBuilder.swift in Sources */,
 				6DF4A57E233BF91D0077FA75 /* NoteTableViewCell.swift in Sources */,
+				6D843A2F23438CD1004A6B20 /* SignUpNavigator.swift in Sources */,
+				6D843A2B23438C88004A6B20 /* SignUpPresenter.swift in Sources */,
+				6D843A2D23438C95004A6B20 /* SignUpBuilder.swift in Sources */,
 				6D765136233E938800A98D45 /* EditNoteViewController.swift in Sources */,
 				6D843A1023429DC0004A6B20 /* LoginNavigator.swift in Sources */,
 				6D843A242342AF0F004A6B20 /* UserDefaultsNotesRepository.swift in Sources */,
@@ -582,6 +607,7 @@
 				6D843A1A2342A6C5004A6B20 /* UsersRepository.swift in Sources */,
 				6D843A0E23429ACB004A6B20 /* User.swift in Sources */,
 				6DF4A577233BEDEA0077FA75 /* NoteViewModel.swift in Sources */,
+				6D843A312343A36B004A6B20 /* SignUpUser.swift in Sources */,
 				6DF4A56B233BBFCF0077FA75 /* GetNotes.swift in Sources */,
 				6DF4A594233C85F70077FA75 /* AddNoteCoordinator.swift in Sources */,
 				6D76513B233EAECD00A98D45 /* EditNoteNavigator.swift in Sources */,
@@ -603,8 +629,10 @@
 				6DF4A55C233BB1F20077FA75 /* NotesListBuilder.swift in Sources */,
 				6DF4A558233BB0AE0077FA75 /* CreateNote.swift in Sources */,
 				6DF4A527233AB7CF0077FA75 /* AppDelegate.swift in Sources */,
+				6D843A2823438B47004A6B20 /* SignUpViewController.swift in Sources */,
 				6D843A1C2342A900004A6B20 /* InMemorySessionsRepository.swift in Sources */,
 				6DF4A590233C7B100077FA75 /* SharedDependenciesContainer.swift in Sources */,
+				6D843A332343A4D0004A6B20 /* LogoutUser.swift in Sources */,
 				6D843A052342880A004A6B20 /* LoginViewController.swift in Sources */,
 				6D843A222342AB1B004A6B20 /* SessionDTO.swift in Sources */,
 				6DF4A58B233C0EF40077FA75 /* AddNoteBuilder.swift in Sources */,

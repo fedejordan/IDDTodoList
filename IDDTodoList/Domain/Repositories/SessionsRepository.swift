@@ -10,4 +10,6 @@ import UIKit
 
 protocol SessionsRepository {
     func create(for userId: String, completion: (Session?) -> Void)
+    func deleteSession(completion: (Bool) -> Void)
+    func getCurrent(completion: (Session?) -> Void)
 }

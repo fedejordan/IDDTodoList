@@ -18,18 +18,31 @@ protocol NotesService {
 class DefaultNotesService: NotesService {
 
     let notesRepository: NotesRepository
+    let authenticationService: AuthenticationService
 
-    init(notesRepository: NotesRepository) {
+    init(notesRepository: NotesRepository,
+         authenticationService: AuthenticationService) {
         self.notesRepository = notesRepository
+        self.authenticationService = authenticationService
     }
 
     func getAllNotes(completion: ([Note]) -> Void) {
-        notesRepository.getNotes(completion: completion)
+        authenticationService.getCurrentSession { session in
+            if let session = session {
+                let userId = session.userId
+                self.notesRepository.getNotes(for: userId, completion: completion)
+            }
+        }
     }
 
     func createNote(with title: String, completion: (Bool) -> Void) {
-        let note = Note(id: UUID().uuidString, title: title) // ID can be created in a isolated service
-        notesRepository.add(note: note, completion: completion)
+        authenticationService.getCurrentSession { session in
+            if let session = session {
+                let userId = session.userId
+                let note = Note(id: UUID().uuidString, title: title, userId: userId) // ID can be created in a isolated service
+                self.notesRepository.add(note: note, completion: completion)
+            }
+        }
     }
 
     func delete(note: Note, completion: (Bool) -> Void) {

@@ -22,7 +22,8 @@ class NotesListBuilder: Builder {
 
     func flowViewController() -> UIViewController {
         let presenter = NotesListPresenter(getNotes: dependenciesContainer.getNotes,
-                                           deleteNote: dependenciesContainer.deleteNote)
+                                           deleteNote: dependenciesContainer.deleteNote,
+                                           logoutUser: dependenciesContainer.logoutUser)
 
         let viewController = NotesListViewController()
         presenter.viewController = viewController

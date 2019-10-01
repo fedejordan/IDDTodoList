@@ -11,4 +11,5 @@ import UIKit
 struct Note {
     let id: String
     let title: String
+    let userId: String
 }

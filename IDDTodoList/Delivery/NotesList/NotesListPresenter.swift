@@ -11,6 +11,7 @@ import Foundation
 protocol NotesListPresenterNavigator: class {
     func shouldShowAddNote()
     func shouldShowEdit(for note: Note)
+    func goBack()
 }
 
 protocol NotesListPresenterViewControllable: class {
@@ -23,6 +24,7 @@ class NotesListPresenter {
 
     let getNotes: GetNotes
     let deleteNote: DeleteNote
+    let logoutUser: LogoutUser
 
     var notes: [Note] = []
     var notesCount: Int {
@@ -30,9 +32,11 @@ class NotesListPresenter {
     }
 
     init(getNotes: GetNotes,
-         deleteNote: DeleteNote) {
+         deleteNote: DeleteNote,
+         logoutUser: LogoutUser) {
         self.getNotes = getNotes
         self.deleteNote = deleteNote
+        self.logoutUser = logoutUser
     }
 
     // MARK:- Utils
@@ -68,6 +72,12 @@ extension NotesListPresenter: NotesListViewControllerListener {
     func didSelectEditNote(at index: Int) {
         let note = notes[index]
         navigator?.shouldShowEdit(for: note)
+    }
+
+    func didTapLogout() {
+        logoutUser.execute { result in
+            if result { self.navigator?.goBack() }
+        }
     }
 }
 

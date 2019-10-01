@@ -16,6 +16,11 @@ class LoginNavigator: NSObject {
 
     weak var viewController: UIViewController?
     weak var listener: LoginNavigatorListener?
+    let signUpBuilder: SignUpBuilder
+
+    init(signUpBuilder: SignUpBuilder) {
+        self.signUpBuilder = signUpBuilder
+    }
 }
 
 extension LoginNavigator: LoginPresenterNavigator {
@@ -26,5 +31,17 @@ extension LoginNavigator: LoginPresenterNavigator {
         }
     }
 
+    func shouldShowSignUp() {
+        let signUpViewController = signUpBuilder.flowViewController(navigatorListener: self)
+        viewController?.show(signUpViewController, sender: nil)
+    }
+
+}
+
+extension LoginNavigator: SignUpNavigatorListener {
+
+    func userDidSignUp() {
+        shouldPresentNotes()
+    }
 
 }

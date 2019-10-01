@@ -10,14 +10,22 @@ import UIKit
 
 class InMemorySessionsRepository: SessionsRepository {
 
-    private var sessions: [SessionDTO] = []
+    private var currentSession: SessionDTO? = nil
 
     func create(for userId: String, completion: (Session?) -> Void) {
         let newSession = SessionDTO(sessionId: UUID().uuidString, userId: userId)
-        sessions.append(newSession)
+        currentSession = newSession
         completion(newSession.toSession())
     }
 
+    func deleteSession(completion: (Bool) -> Void) {
+        currentSession = nil
+        completion(true)
+    }
+
+    func getCurrent(completion: (Session?) -> Void) {
+        completion(currentSession?.toSession())
+    }
 
 }
 

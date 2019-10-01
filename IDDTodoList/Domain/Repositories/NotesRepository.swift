@@ -9,7 +9,7 @@
 import UIKit
 
 protocol NotesRepository {
-    func getNotes(completion: ([Note]) -> Void)
+    func getNotes(for userId: String, completion: ([Note]) -> Void)
     func add(note: Note, completion: (Bool) -> Void)
     func delete(note: Note, completion: (Bool) -> Void)
     func update(note: Note, with title: String, completion: (Bool) -> Void)

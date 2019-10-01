@@ -12,8 +12,8 @@ class InMemoryNotesRepository: NotesRepository {
 
     private var notes: [NoteDTO] = []
 
-    func getNotes(completion: ([Note]) -> Void) {
-        let notes = self.notes.map { $0.toNote() }
+    func getNotes(for userId: String, completion: ([Note]) -> Void) {
+        let notes = self.notes.map { $0.toNote() }.filter { $0.userId == userId }
         completion(notes)
     }
 
@@ -30,7 +30,7 @@ class InMemoryNotesRepository: NotesRepository {
     func update(note: Note, with title: String, completion: (Bool) -> Void)  {
         let index = notes.firstIndex { $0.id == note.id }
         if let index = index {
-            let newNote = Note(id: note.id, title: title)
+            let newNote = Note(id: note.id, title: title, userId: note.userId)
             notes[index] = noteDTO(from: newNote)
             completion(true)
         }
@@ -42,6 +42,6 @@ class InMemoryNotesRepository: NotesRepository {
     }
 
     private func noteDTO(from note: Note) -> NoteDTO {
-        return NoteDTO(id: note.id, title: note.title)
+        return NoteDTO(id: note.id, title: note.title, userId: note.userId)
     }
 }
