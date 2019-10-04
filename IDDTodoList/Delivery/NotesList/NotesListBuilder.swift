@@ -29,10 +29,10 @@ class NotesListBuilder: Builder {
         presenter.viewController = viewController
         viewController.listener = presenter
 
-        let navigator = NotesListCoordinator(addNoteBuilder: dependenciesContainer.addNoteBuilder, editNoteBuilder: dependenciesContainer.editNoteBuilder)
-        presenter.navigator = navigator
-        navigator.viewController = viewController
-        navigator.presenter = presenter
+        let coordinator = NotesListCoordinator(addNoteBuilder: dependenciesContainer.addNoteBuilder, editNoteBuilder: dependenciesContainer.editNoteBuilder)
+        presenter.coordinator = coordinator
+        coordinator.viewController = viewController
+        coordinator.presenter = presenter
 
         return viewController
     }

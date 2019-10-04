@@ -12,14 +12,14 @@ protocol SignUpPresenterViewControllable: class {
     func showSignUpError()
 }
 
-protocol SignUpPresenterNavigator {
+protocol SignUpPresenterCoordinator {
     func shouldPresentNotes()
 }
 
 class SignUpPresenter {
 
     weak var viewController: SignUpPresenterViewControllable?
-    var navigator: SignUpPresenterNavigator!
+    var coordinator: SignUpPresenterCoordinator!
     let signUpUser: SignUpUser
 
     init(signUpUser: SignUpUser) {
@@ -32,7 +32,7 @@ extension SignUpPresenter: SignUpViewControllerListener {
     func didTapSignUp(with username: String, password: String, confirmPassword: String) {
         signUpUser.execute(with: username, password: password, confirmPassword: confirmPassword) { success in
             if success {
-                self.navigator.shouldPresentNotes()
+                self.coordinator.shouldPresentNotes()
             } else {
                 self.viewController?.showSignUpError()
             }

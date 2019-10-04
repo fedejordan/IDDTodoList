@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol EditNotePresenterNavigator {
+protocol EditNotePresenterCoordinator {
     func goBack()
 }
 
 class EditNotePresenter {
     let editNote: EditNote
     var note: Note!
-    var navigator: EditNotePresenterNavigator!
+    var coordinator: EditNotePresenterCoordinator!
 
     init(editNote: EditNote) {
         self.editNote = editNote
@@ -26,7 +26,7 @@ extension EditNotePresenter: EditNoteViewControllerListener {
 
     func didTapConfirmEdit(with title: String) {
         editNote.execute(for: note, with: title) { result in
-            self.navigator.goBack()
+            self.coordinator.goBack()
         }
     }
 

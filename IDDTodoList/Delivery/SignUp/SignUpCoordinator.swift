@@ -1,5 +1,5 @@
 //
-//  SignUpNavigator.swift
+//  SignUpCoordinator.swift
 //  IDDTodoList
 //
 //  Created by Federico Jordan on 01/10/2019.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol SignUpNavigatorListener: class {
+protocol SignUpCoordinatorListener: class {
     func userDidSignUp()
 }
 
-class SignUpNavigator {
-    weak var listener: SignUpNavigatorListener?
+class SignUpCoordinator {
+    weak var listener: SignUpCoordinatorListener?
     weak var viewController: UIViewController?
 }
 
-extension SignUpNavigator: SignUpPresenterNavigator {
+extension SignUpCoordinator: SignUpPresenterCoordinator {
 
     func shouldPresentNotes() {
         listener?.userDidSignUp()

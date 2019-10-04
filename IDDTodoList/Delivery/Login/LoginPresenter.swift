@@ -13,14 +13,14 @@ protocol LoginPresenterViewControllable: class {
 
 }
 
-protocol LoginPresenterNavigator {
+protocol LoginPresenterCoordinator {
     func shouldPresentNotes()
     func shouldShowSignUp()
 }
 
 class LoginPresenter {
     weak var viewController: LoginPresenterViewControllable?
-    var navigator: LoginPresenterNavigator!
+    var coordinator: LoginPresenterCoordinator!
 
     let loginUser: LoginUser
 
@@ -34,7 +34,7 @@ extension LoginPresenter: LoginViewControllerListener {
     func didTapLogin(with username: String, password: String) {
         loginUser.execute(username: username, password: password) { success in
             if success {
-                self.navigator.shouldPresentNotes()
+                self.coordinator.shouldPresentNotes()
             } else {
                 self.viewController?.showLoginError()
             }
@@ -42,7 +42,7 @@ extension LoginPresenter: LoginViewControllerListener {
     }
 
     func didTapSignUp() {
-        navigator.shouldShowSignUp()
+        coordinator.shouldShowSignUp()
     }
 
 

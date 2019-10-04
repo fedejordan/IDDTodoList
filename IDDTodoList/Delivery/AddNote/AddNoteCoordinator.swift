@@ -19,7 +19,7 @@ class AddNoteCoordinator: NSObject {
 
 }
 
-extension AddNoteCoordinator: AddNotePresenterNavigator {
+extension AddNoteCoordinator: AddNotePresenterCoordinator {
 
     func goBack() {
         DispatchQueue.main.async {

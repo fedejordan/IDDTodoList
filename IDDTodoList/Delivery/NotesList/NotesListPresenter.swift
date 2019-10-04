@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NotesListPresenterNavigator: class {
+protocol NotesListPresenterCoordinator: class {
     func shouldShowAddNote()
     func shouldShowEdit(for note: Note)
     func goBack()
@@ -20,7 +20,7 @@ protocol NotesListPresenterViewControllable: class {
 
 class NotesListPresenter {
     weak var viewController: NotesListPresenterViewControllable?
-    var navigator: NotesListPresenterNavigator?
+    var coordinator: NotesListPresenterCoordinator?
 
     let getNotes: GetNotes
     let deleteNote: DeleteNote
@@ -55,7 +55,7 @@ extension NotesListPresenter: NotesListViewControllerListener {
     }
 
     func didTapAddNote() {
-        navigator?.shouldShowAddNote()
+        coordinator?.shouldShowAddNote()
     }
 
     func didSelectDeleteNote(at index: Int) {
@@ -71,12 +71,12 @@ extension NotesListPresenter: NotesListViewControllerListener {
 
     func didSelectEditNote(at index: Int) {
         let note = notes[index]
-        navigator?.shouldShowEdit(for: note)
+        coordinator?.shouldShowEdit(for: note)
     }
 
     func didTapLogout() {
         logoutUser.execute { result in
-            if result { self.navigator?.goBack() }
+            if result { self.coordinator?.goBack() }
         }
     }
 }

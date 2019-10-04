@@ -15,14 +15,14 @@ class EditNoteBuilder {
         self.dependenciesContainer = dependenciesContainer
     }
 
-    func flowViewController(coordinatorListener: EditNoteNavigatorListener, note: Note) -> UIViewController {
+    func flowViewController(coordinatorListener: EditNoteCoordinatorListener, note: Note) -> UIViewController {
         let viewController = EditNoteViewController()
         let presenter = EditNotePresenter(editNote: dependenciesContainer.editNote)
-        let navigator = EditNoteNavigator()
-        presenter.navigator = navigator
+        let coordinator = EditNoteCoordinator()
+        presenter.coordinator = coordinator
         presenter.note = note
-        navigator.listener = coordinatorListener
-        navigator.viewController = viewController
+        coordinator.listener = coordinatorListener
+        coordinator.viewController = viewController
 
         viewController.listener = presenter
 

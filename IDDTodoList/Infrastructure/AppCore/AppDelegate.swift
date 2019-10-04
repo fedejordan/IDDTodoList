@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sharedDependenciesContainer = SharedDependenciesContainer()
 
         let loginBuilder = sharedDependenciesContainer.loginBuilder
-        let initialViewController = loginBuilder.flowViewController(navigatorListener: self)
+        let initialViewController = loginBuilder.flowViewController(coordinatorListener: self)
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: initialViewController)
@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-extension AppDelegate: LoginNavigatorListener {
+extension AppDelegate: LoginCoordinatorListener {
 
     func userDidLogin() {
         if let rootViewController = window?.rootViewController {

@@ -1,5 +1,5 @@
 //
-//  LoginNavigator.swift
+//  LoginCoordinator.swift
 //  IDDTodoList
 //
 //  Created by Federico Jordan on 30/09/2019.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol LoginNavigatorListener: class {
+protocol LoginCoordinatorListener: class {
     func userDidLogin()
 }
 
-class LoginNavigator: NSObject {
+class LoginCoordinator: NSObject {
 
     weak var viewController: UIViewController?
-    weak var listener: LoginNavigatorListener?
+    weak var listener: LoginCoordinatorListener?
     let signUpBuilder: SignUpBuilder
 
     init(signUpBuilder: SignUpBuilder) {
@@ -23,7 +23,7 @@ class LoginNavigator: NSObject {
     }
 }
 
-extension LoginNavigator: LoginPresenterNavigator {
+extension LoginCoordinator: LoginPresenterCoordinator {
 
     func shouldPresentNotes() {
         DispatchQueue.main.async {
@@ -32,13 +32,13 @@ extension LoginNavigator: LoginPresenterNavigator {
     }
 
     func shouldShowSignUp() {
-        let signUpViewController = signUpBuilder.flowViewController(navigatorListener: self)
+        let signUpViewController = signUpBuilder.flowViewController(coordinatorListener: self)
         viewController?.show(signUpViewController, sender: nil)
     }
 
 }
 
-extension LoginNavigator: SignUpNavigatorListener {
+extension LoginCoordinator: SignUpCoordinatorListener {
 
     func userDidSignUp() {
         shouldPresentNotes()

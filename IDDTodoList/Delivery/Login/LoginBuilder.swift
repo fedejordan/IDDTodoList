@@ -16,16 +16,16 @@ class LoginBuilder{
         self.dependenciesContainer = dependenciesContainer
     }
 
-    func flowViewController(navigatorListener: LoginNavigatorListener) -> UIViewController {
+    func flowViewController(coordinatorListener: LoginCoordinatorListener) -> UIViewController {
         let viewController = LoginViewController()
         let presenter = LoginPresenter(loginUser: dependenciesContainer.loginUser)
 
         viewController.listener = presenter
         presenter.viewController = viewController
-        let navigator = LoginNavigator(signUpBuilder: dependenciesContainer.signUpBuilder)
-        presenter.navigator = navigator
-        navigator.viewController = viewController
-        navigator.listener = navigatorListener
+        let coordinator = LoginCoordinator(signUpBuilder: dependenciesContainer.signUpBuilder)
+        presenter.coordinator = coordinator
+        coordinator.viewController = viewController
+        coordinator.listener = coordinatorListener
 
         return viewController
     }

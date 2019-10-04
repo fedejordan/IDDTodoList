@@ -15,16 +15,16 @@ class SignUpBuilder: NSObject {
         self.dependenciesContainer = dependenciesContainer
     }
 
-    func flowViewController(navigatorListener: SignUpNavigatorListener) -> UIViewController {
+    func flowViewController(coordinatorListener: SignUpCoordinatorListener) -> UIViewController {
         let viewController = SignUpViewController()
         let presenter = SignUpPresenter(signUpUser: dependenciesContainer.signUpUser)
 
         viewController.listener = presenter
         presenter.viewController = viewController
-        let navigator = SignUpNavigator()
-        presenter.navigator = navigator
-        navigator.viewController = viewController
-        navigator.listener = navigatorListener
+        let coordinator = SignUpCoordinator()
+        presenter.coordinator = coordinator
+        coordinator.viewController = viewController
+        coordinator.listener = coordinatorListener
 
         return viewController
     }

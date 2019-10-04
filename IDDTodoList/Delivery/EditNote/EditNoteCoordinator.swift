@@ -1,5 +1,5 @@
 //
-//  EditNoteNavigator.swift
+//  EditNoteCoordinator.swift
 //  IDDTodoList
 //
 //  Created by Federico Jordan on 27/09/2019.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-protocol EditNoteNavigatorListener: class {
+protocol EditNoteCoordinatorListener: class {
     func didUpdateNote()
 }
 
-class EditNoteNavigator {
+class EditNoteCoordinator {
 
     weak var viewController: UIViewController?
-    weak var listener: EditNoteNavigatorListener?
+    weak var listener: EditNoteCoordinatorListener?
 
 }
 
-extension EditNoteNavigator: EditNotePresenterNavigator {
+extension EditNoteCoordinator: EditNotePresenterCoordinator {
 
     func goBack() {
         DispatchQueue.main.async {

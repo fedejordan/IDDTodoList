@@ -26,7 +26,7 @@ class NotesListCoordinator: NSObject {
 
 }
 
-extension NotesListCoordinator: NotesListPresenterNavigator {
+extension NotesListCoordinator: NotesListPresenterCoordinator {
 
     func shouldShowAddNote() {
         let addNoteViewController = addNoteBuilder.flowViewController(coordinatorListener: self)
@@ -52,7 +52,7 @@ extension NotesListCoordinator: AddNoteCoordinatorListener {
 
 }
 
-extension NotesListCoordinator: EditNoteNavigatorListener {
+extension NotesListCoordinator: EditNoteCoordinatorListener {
 
     func didUpdateNote() {
         presenter?.shouldUpdateList()

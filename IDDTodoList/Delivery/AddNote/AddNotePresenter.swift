@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol AddNotePresenterNavigator {
+protocol AddNotePresenterCoordinator {
     func goBack()
 }
 
 class AddNotePresenter {
     let createNote: CreateNote
-    var navigator: AddNotePresenterNavigator?
+    var coordinator: AddNotePresenterCoordinator?
 
     init(createNote: CreateNote) {
         self.createNote = createNote
@@ -25,7 +25,7 @@ class AddNotePresenter {
 extension AddNotePresenter: AddNoteViewControllerListener {
     func didTapAddNote(with title: String) {
         createNote.execute(with: title) { (result) in
-            self.navigator?.goBack()
+            self.coordinator?.goBack()
         }
     }
 

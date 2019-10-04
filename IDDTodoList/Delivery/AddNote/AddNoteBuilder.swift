@@ -19,10 +19,10 @@ class AddNoteBuilder {
     func flowViewController(coordinatorListener: AddNoteCoordinatorListener) -> UIViewController {
         let viewController = AddNoteViewController()
         let presenter = AddNotePresenter(createNote: dependenciesContainer.createNote)
-        let navigator = AddNoteCoordinator()
-        presenter.navigator = navigator
-        navigator.listener = coordinatorListener
-        navigator.viewController = viewController
+        let coordinator = AddNoteCoordinator()
+        presenter.coordinator = coordinator
+        coordinator.listener = coordinatorListener
+        coordinator.viewController = viewController
 
         viewController.listener = presenter
         
